@@ -4,20 +4,12 @@
     <form @submit.prevent="login">
       <table>
         <tr>
-          <td>
-            <label for="username">Username:</label>
-          </td>
-          <td>
-            <input type="text" id="username" v-model="username" required />
-          </td>
+          <td> <label for="username">Email:</label></td>
+          <td><input type="text" id="username" v-model="username" required /></td>
         </tr>
         <tr>
-          <td>
-            <label for="password">Password:</label>
-          </td>
-          <td>
-            <input type="password" id="password" v-model="password" required />
-          </td>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" id="password" v-model="password" required /></td>
         </tr>
         <button type="submit">Login</button>
       </table>

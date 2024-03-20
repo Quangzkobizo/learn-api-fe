@@ -6,7 +6,8 @@ import HelloWorld from '@/components/HelloWorld.vue';
 import Dashboard from '@/components/Dashboard.vue';
 import Logout from '@/components/Logout.vue';
 import CreateInfo from '@/components/CreateInfo.vue';
-import ShowInfo from '../components/ShowInfo.vue';
+import ShowInfo from '@/components/ShowInfo.vue';
+import Register from '@/components/Register.vue'
 
 // Định nghĩa các routes
 const routes = [
@@ -43,6 +44,11 @@ const routes = [
     name: 'info.show',
     component: ShowInfo,
   },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
+  }
 ];
 
 // Tạo router instance
