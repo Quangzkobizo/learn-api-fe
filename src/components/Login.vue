@@ -25,6 +25,7 @@
 
     <p v-if="errorMessage">{{ errorMessage }}</p>
   </div>
+  Don't have account? <a href="register"> Register</a>
 </template>
 
 <script>
@@ -48,21 +49,13 @@ export default {
         })
         .then((response) => {
           console.log(response);
-          console.log("response");
-          //console.log();
-
           localStorage.setItem('jwt_token', response.data.authorisation.token);
-
           console.log(JSON.stringify(response.data.user));
           localStorage.setItem('user', JSON.stringify(response.data.user));
-          
-
           this.$router.push('/dashboard');
         })
         .catch((error) => {
           console.log(error);
-          console.log("error");
-
           this.errorMessage = "Wrong email or password";
         });
     },
