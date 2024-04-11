@@ -35,15 +35,15 @@ export default {
   methods: {
     async login() {
       axios
-        .post("http://localhost:8000/api/login", {
+        .post("http://localhost:8000/api/auth/login", {
           email: this.username,
           password: this.password,
         })
         .then((response) => {
           console.log(response);
           localStorage.setItem('jwt_token', response.data.authorisation.token);
-          console.log(JSON.stringify(response.data.user));
-          localStorage.setItem('user', JSON.stringify(response.data.user));
+          //console.log(JSON.stringify(response.data.user));
+          //localStorage.setItem('user', JSON.stringify(response.data.user));
           this.$router.push('/dashboard');
         })
         .catch((error) => {

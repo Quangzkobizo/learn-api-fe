@@ -62,7 +62,7 @@ name: 'RegisterPage',
 
         async sendRegisterRequest() {
             axios
-                .post('http://localhost:8000/api/register',{
+                .post('http://localhost:8000/api/auth/register',{
                     name: this.username,
                     email: this.email,
                     password: this.password,

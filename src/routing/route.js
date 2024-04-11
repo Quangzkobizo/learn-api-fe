@@ -8,6 +8,7 @@ import Logout from '@/components/Logout.vue';
 import CreateInfo from '@/components/CreateInfo.vue';
 import ShowInfo from '@/components/ShowInfo.vue';
 import Register from '@/components/Register.vue'
+import UploadAvatar from '@/components/UploadAvatar.vue';
 
 // Định nghĩa các routes
 const routes = [
@@ -40,14 +41,19 @@ const routes = [
     component: CreateInfo,
   },
   {
-    path: '/info/show',
-    name: 'info.show',
+    path: '/user/me',
+    name: 'user.me',
     component: ShowInfo,
   },
   {
     path: '/register',
     name: 'register',
     component: Register,
+  },
+  {
+    path: '/user/upload-avatar',
+    name:'user.upload-avatar',
+    component: UploadAvatar,
   }
 ];
 

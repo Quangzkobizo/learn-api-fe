@@ -19,7 +19,7 @@ export default {
     //console.log(localStorage.getItem('jwt_token'));
     axios
       .post(
-        "http://localhost:8000/api/logout",
+        "http://localhost:8000/api/auth/logout",
         {},
         {
           headers: {
